@@ -1,4 +1,4 @@
-var defaultURL = 'mattkersley.com'; //<---- CHANGE TO YOUR WEBSITE URL
+var defaultURL = 'salimane.com'; //<---- CHANGE TO YOUR WEBSITE URL
 
 //show loading graphic
 function showLoader(id) {
@@ -98,19 +98,19 @@ $(document).ready(function(){
     } catch(e) {
       error = true;
       if($('#url input[type=text]').val() != ''){
-        url = $('#url input[type=text]').val();
+	url = $('#url input[type=text]').val();
       } else {
-        url = defaultURL;
+	url = defaultURL;
       }
     }
 
     //load other pages with the same URL
     if(allLoaded()){
       if(error){
-        alert('Browsers prevent navigation from inside iframes across domains.\nPlease use the textbox at the top for external sites.');
-        loadPage('', defaultURL);
+	alert('Browsers prevent navigation from inside iframes across domains.\nPlease use the textbox at the top for external sites.');
+	loadPage('', defaultURL);
       }else{
-        loadPage($this, url);
+	loadPage($this, url);
       }
     }
 
