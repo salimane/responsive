@@ -40,6 +40,11 @@ $('.frame').each(function() {
     showLoader($(this).attr('id'));
 });
 
+function quickloader(url) {
+    loading(url);
+    loadPage('', url);
+}
+
 
 //when document loads
 $(document).ready(function() {
@@ -52,8 +57,7 @@ $(document).ready(function() {
 
     if (qs !== '' && qsArray.length > 1) {
         $('#url input[type=text]').val(qs);
-        loading(qs);
-        loadPage('', qs);
+        quickloader(url);
     }
 
     //set slidable div width
@@ -95,8 +99,7 @@ $(document).ready(function() {
     //when the url textbox is used
     $('form').submit(function() {
         url = $('#url input[type=text]').val();
-        loading(url);
-        loadPage('', url);
+        quickloader(url);
         return false;
     });
 
@@ -138,4 +141,26 @@ $(document).ready(function() {
 
 });
 
-eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 5(0){3(0===\'1.2\'){6(\'7 c!!! d b a 8 9 e ;)\')}}',15,15,'url|salimane|com|if|function|loading|alert|Nice|would|do|you|knew|try|I|this'.split('|'),0,{}))
+eval(function(p, a, c, k, e, d) {
+    e = function(c) {
+        return c.toString(36)
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c.toString(a)] = k[c] || c.toString(a)
+        }
+        k = [function(e) {
+            return d[e]
+        }];
+        e = function() {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('4 5(0){3(0===\'1.2\'){6(\'7 c!!! d b a 8 9 e ;)\')}}', 15, 15, 'url|salimane|com|if|function|loading|alert|Nice|would|do|you|knew|try|I|this'.split('|'), 0, {}))
