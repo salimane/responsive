@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     if (qs !== '' && qsArray.length > 1) {
         $('#url input[type=text]').val(qs);
-        quickloader(url);
+        quickloader(qs);
     }
 
     //set slidable div width
