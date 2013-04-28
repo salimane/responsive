@@ -40,6 +40,11 @@ $('.frame').each(function() {
     showLoader($(this).attr('id'));
 });
 
+function quickloader(url) {
+    loading(url);
+    loadPage('', url);
+}
+
 
 //when document loads
 $(document).ready(function() {
@@ -52,8 +57,7 @@ $(document).ready(function() {
 
     if (qs !== '' && qsArray.length > 1) {
         $('#url input[type=text]').val(qs);
-        loading(qs);
-        loadPage('', qs);
+        quickloader(url);
     }
 
     //set slidable div width
@@ -95,8 +99,7 @@ $(document).ready(function() {
     //when the url textbox is used
     $('form').submit(function() {
         url = $('#url input[type=text]').val();
-        loading(url);
-        loadPage('', url);
+        quickloader(url);
         return false;
     });
 
